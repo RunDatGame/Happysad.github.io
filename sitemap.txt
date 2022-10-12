@@ -1,3 +1,10 @@
+http://example.com/about/index.html
+http://example.com/2022/10/13/log/logNamelogName/
+http://example.com/tools/index.html
+http://example.com/tags/index.html
+http://example.com/categories/index.html
+http://example.com/link/index.html
+http://example.com/log/index.html
 http://example.com/Music/index.html
 http://example.com/2020/03/10/FIRST-DAY/
 http://example.com/2022/10/13/MY/
