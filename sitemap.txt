@@ -2,7 +2,10 @@ http://example.com/2020/03/10/FIRST-DAY/
 http://example.com/2022/10/13/MY/
 http://example.com/2022/10/13/hello-world/
 http://example.com/
-http://example.com/tags/tag1/
-http://example.com/tags/tag2/
-http://example.com/tags/tag3/
-http://example.com/categories/LOVE/
+http://example.com/tags/C-S/
+http://example.com/tags/C/
+http://example.com/tags/Algrithom/
+http://example.com/categories/Love/
+http://example.com/categories/Love/Friend/
+http://example.com/categories/Love/Friend/Game/
+http://example.com/categories/Love/Friend/Game/Music/
