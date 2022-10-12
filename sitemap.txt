@@ -1,0 +1,8 @@
+http://example.com/2020/03/10/FIRST-DAY/
+http://example.com/2022/10/13/MY/
+http://example.com/2022/10/13/hello-world/
+http://example.com/
+http://example.com/tags/tag1/
+http://example.com/tags/tag2/
+http://example.com/tags/tag3/
+http://example.com/categories/LOVE/
