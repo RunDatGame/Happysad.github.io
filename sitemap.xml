@@ -94,7 +94,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,21 +102,21 @@
   
   <url>
     <loc>http://example.com/tags/C-S/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/C/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Algrithom/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -125,28 +125,28 @@
   
   <url>
     <loc>http://example.com/categories/Love/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Love/Friend/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Love/Friend/Game/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Love/Friend/Game/Music/</loc>
-    <lastmod>2022-10-12</lastmod>
+    <lastmod>2022-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
