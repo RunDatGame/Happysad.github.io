@@ -101,9 +101,9 @@
     <category term="Love" scheme="http://example.com/categories/Love/"/>
     
     
-    <category term="Life" scheme="http://example.com/tags/Life/"/>
-    
     <category term="Music" scheme="http://example.com/tags/Music/"/>
+    
+    <category term="Life" scheme="http://example.com/tags/Life/"/>
     
   </entry>
   
