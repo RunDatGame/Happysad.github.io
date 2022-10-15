@@ -1,7 +1,8 @@
+http://example.com/2022/10/14/10-14OJ/
+http://example.com/2022/10/15/OJ-10-15/
 http://example.com/shuoshuo/index.html
 http://example.com/gallery/XACity.html
 http://example.com/2022/03/10/%E6%88%91%E7%88%B1%E4%BD%A0/
-http://example.com/2022/10/14/10-14OJ/
 http://example.com/2022/10/14/LeetCode10.14/
 http://example.com/2022/10/15/LeetCode10-15/
 http://example.com/2022/10/13/Leetcode34/
