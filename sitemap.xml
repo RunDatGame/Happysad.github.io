@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/10/15/OJ-10-15/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/10/14/10-14OJ/</loc>
     
     <lastmod>2022-10-15</lastmod>
@@ -11,7 +20,34 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/10/15/OJ-10-15/</loc>
+    <loc>http://example.com/2022/10/15/LeetCode10-15/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/10/13/Leetcode%20%E9%93%BE%E8%A1%A8/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/10/14/LeetCode10.14/</loc>
+    
+    <lastmod>2022-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/10/13/Leetcode34/</loc>
     
     <lastmod>2022-10-15</lastmod>
     
@@ -41,42 +77,6 @@
     <loc>http://example.com/2022/03/10/%E6%88%91%E7%88%B1%E4%BD%A0/</loc>
     
     <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/10/14/LeetCode10.14/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/10/15/LeetCode10-15/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/10/13/Leetcode34/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/10/13/Leetcode%20%E9%93%BE%E8%A1%A8/</loc>
-    
-    <lastmod>2022-10-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -164,13 +164,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/Algorithom/</loc>
-    <lastmod>2022-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/LeetCode/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -200,6 +193,13 @@
   
   <url>
     <loc>http://example.com/tags/Life/</loc>
+    <lastmod>2022-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Algorithm/</loc>
     <lastmod>2022-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
