@@ -1,9 +1,9 @@
+http://example.com/2022/10/14/LeetCode10.14/
+http://example.com/2022/10/16/LeetCode10-16/
 http://example.com/2022/10/14/10-14OJ/
 http://example.com/2022/10/15/OJ-10-15/
 http://example.com/2022/10/13/Leetcode%20%E9%93%BE%E8%A1%A8/
 http://example.com/2022/10/15/LeetCode10-15/
-http://example.com/2022/10/16/LeetCode10-16/
-http://example.com/2022/10/14/LeetCode10.14/
 http://example.com/2022/10/13/Leetcode34/
 http://example.com/shuoshuo/index.html
 http://example.com/gallery/XACity.html
@@ -27,6 +27,8 @@ http://example.com/tags/Music/
 http://example.com/tags/Pharaoh/
 http://example.com/tags/KKecho/
 http://example.com/tags/Life/
+http://example.com/tags/DFS/
+http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/
 http://example.com/categories/LeetCode/
 http://example.com/categories/Music/
 http://example.com/categories/Love/
