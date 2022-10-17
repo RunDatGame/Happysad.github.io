@@ -1,3 +1,4 @@
+http://example.com/2022/10/16/LeetCode%2010-17/
 http://example.com/2022/10/16/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/
 http://example.com/2022/10/14/10-14OJ/
 http://example.com/2022/10/15/OJ-10-15/
@@ -33,6 +34,8 @@ http://example.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/
 http://example.com/tags/OJ/
 http://example.com/tags/POJ/
 http://example.com/tags/%E8%B4%AA%E5%BF%83/
+http://example.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/
+http://example.com/tags/Hash/
 http://example.com/categories/LeetCode/
 http://example.com/categories/Music/
 http://example.com/categories/Love/
