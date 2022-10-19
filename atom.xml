@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-16T12:11:27.158Z</updated>
+  <updated>2022-10-19T18:42:05.362Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode-10-20</title>
+    <link href="http://example.com/2022/10/20/10-20/"/>
+    <id>http://example.com/2022/10/20/10-20/</id>
+    <published>2022-10-19T18:16:12.000Z</published>
+    <updated>2022-10-19T18:42:05.362Z</updated>
+    
+    <content type="html"><![CDATA[<p>#<a href="https://leetcode.cn/problems/k-th-symbol-in-grammar/">779. 第 K 个语法符号</a></p><ul><li>下面给出两种方法：</li></ul><h2 id="位运算奇偶校验："><a href="#位运算奇偶校验：" class="headerlink" title="位运算奇偶校验："></a>位运算奇偶校验：</h2><ul><li>用二叉树将这些点表示出来会发现每个结点的序号用二进制表示时如果是</li><li>偶数个 1  &#x3D;&gt;  结点为 1</li><li>奇数个 1  &#x3D;&gt;  结点为 0</li><li>那就根据 n 和 k 算出结点的序号再转换为二进制即可判断</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">kthGrammar</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> x=<span class="built_in">pow</span>(<span class="number">2</span>,n<span class="number">-1</span>)+k<span class="number">-1</span>;</span><br><span class="line">        <span class="type">int</span> cnt [<span class="number">2</span>]=&#123;<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">while</span>(x)&#123;<span class="comment">// 十进制转二进制 </span></span><br><span class="line">            cnt [x%<span class="number">2</span>]++;</span><br><span class="line">            x/=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(cnt [<span class="number">1</span>]%<span class="number">2</span>==<span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">// 偶数个 1</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">// 奇数个 1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><ul><li>判断如果 n&#x3D;&#x3D;1 肯定是 0</li><li>记录父节点 &#x3D; 递归 (n&#x3D;n-1,k&#x3D;(k+1)&#x2F;2);</li><li>如果 k 是奇数 则这个结点值 &#x3D;&#x3D; 父节点的值:father</li><li>如果 k 是偶数 则和父节点相反：1^father</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="type">int</span> <span class="title">kthGrammar</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> father = <span class="built_in">kthGrammar</span>(n - <span class="number">1</span>, k + <span class="number">1</span> &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> (k &amp; <span class="number">1</span>) == <span class="number">1</span> ? father : <span class="number">1</span> ^ father;</span><br><span class="line">            <span class="comment">// 奇数 & amp;1=1, 偶数 & amp;1=0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#&lt;a href=&quot;https://leetcode.cn/problems/k-th-symbol-in-grammar/&quot;&gt;779. 第 K 个语法符号&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下面给出两种方法：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;位运算奇偶校验：&quot;&gt;&lt;a</summary>
+      
+    
+    
+    
+    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
+    
+    
+    <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="位运算" scheme="http://example.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode-10-19</title>
+    <link href="http://example.com/2022/10/19/log/LeetCode%2010-18/"/>
+    <id>http://example.com/2022/10/19/log/LeetCode%2010-18/</id>
+    <published>2022-10-19T14:58:15.000Z</published>
+    <updated>2022-10-19T18:15:22.546Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="说两句"><a href="#说两句" class="headerlink" title="说两句"></a>说两句</h1><p>难得有道简单题 还做不出来。。。<br>昨天的也巨难 是数位 DP 根本不会 等以后会了再来补上<br>确实要学的东西太多了，但偏偏越知道这些 越想要摆烂，每天都在浪费时间 OvO</p><h1 id="1700-无法吃午餐的学生数量"><a href="#1700-无法吃午餐的学生数量" class="headerlink" title="1700. 无法吃午餐的学生数量"></a><a href="https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/">1700. 无法吃午餐的学生数量</a></h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul><li>0 代表喜欢，1 代表不喜欢</li><li>把学生遍历完 记录喜欢的数量和不喜欢的数量</li><li>再遍历三明治，按顺序将 0 或者 1 的数量减掉直到某一个的数量减到 0 </li><li>此时剩下的数量就是没饭吃的学生数量</li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">countStudents</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; students, vector&lt;<span class="type">int</span>&gt;&amp; sandwiches)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> cnt [<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> student : students) cnt [student]++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> sandwich : sandwiches) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cnt [sandwich] &gt; <span class="number">0</span>) cnt [sandwich]--;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt [<span class="number">0</span>] + cnt [<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;说两句&quot;&gt;&lt;a href=&quot;#说两句&quot; class=&quot;headerlink&quot; title=&quot;说两句&quot;&gt;&lt;/a&gt;说两句&lt;/h1&gt;&lt;p&gt;难得有道简单题 还做不出来。。。&lt;br&gt;昨天的也巨难 是数位 DP 根本不会 等以后会了再来补上&lt;br&gt;确实要学的东西太多了，但偏偏</summary>
+      
+    
+    
+    
+    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
+    
+    
+    <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="模拟" scheme="http://example.com/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="计数" scheme="http://example.com/tags/%E8%AE%A1%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>贪心算法</title>
