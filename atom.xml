@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-19T18:47:03.491Z</updated>
+  <updated>2022-10-21T07:11:39.595Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode-10-21</title>
+    <link href="http://example.com/2022/10/21/LeetCode-10-21/"/>
+    <id>http://example.com/2022/10/21/LeetCode-10-21/</id>
+    <published>2022-10-21T07:05:29.000Z</published>
+    <updated>2022-10-21T07:11:39.595Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="901-股票价格跨度"><a href="#901-股票价格跨度" class="headerlink" title="901. 股票价格跨度"></a><a href="https://leetcode.cn/problems/online-stock-span/">901. 股票价格跨度</a></h1><h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><p>一开始我想不通怎么将构造一个单调栈。</p><ul><li>第一天的价格肯定是先入栈作为唯一一个元素，之后开始判断每一天的价格是比栈顶的大还是小<ul><li>如果比栈顶大，因为要维护从栈底到栈顶单调递减的 大的肯定要在下面</li><li>则把栈顶出栈，把栈顶的跨度加到新的一天的跨度上再入栈</li><li>如果比栈顶小，那说明前面几天都没有比他小的了，他的跨度就是 1 把这个 price 和 1 直接入栈就好</li></ul></li></ul><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">StockSpanner</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">StockSpanner</span>() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">next</span><span class="params">(<span class="type">int</span> price)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> cnt=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(!span.<span class="built_in">empty</span>()&amp;&amp;span.<span class="built_in">top</span>().first&lt;=price)&#123;</span><br><span class="line">                cnt+=span.<span class="built_in">top</span>().second;<span class="comment">// 跨度累加 </span></span><br><span class="line">                span.<span class="built_in">pop</span>();<span class="comment">// 不要了 </span></span><br><span class="line">        &#125;</span><br><span class="line">        span.<span class="built_in">push</span>(&#123;price,cnt&#125;);</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    stack&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt;span;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;901-股票价格跨度&quot;&gt;&lt;a href=&quot;#901-股票价格跨度&quot; class=&quot;headerlink&quot; title=&quot;901. 股票价格跨度&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/online-stock-span</summary>
+      
+    
+    
+    
+    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
+    
+    
+    <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="单调栈" scheme="http://example.com/tags/%E5%8D%95%E8%B0%83%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode-10-20</title>
-    <link href="http://example.com/2022/10/20/10-20/"/>
-    <id>http://example.com/2022/10/20/10-20/</id>
+    <link href="http://example.com/2022/10/20/LeetCode-10-20/"/>
+    <id>http://example.com/2022/10/20/LeetCode-10-20/</id>
     <published>2022-10-19T18:16:12.000Z</published>
     <updated>2022-10-19T18:47:03.491Z</updated>
     
@@ -44,8 +70,8 @@
   
   <entry>
     <title>LeetCode-10-19</title>
-    <link href="http://example.com/2022/10/19/log/LeetCode%2010-18/"/>
-    <id>http://example.com/2022/10/19/log/LeetCode%2010-18/</id>
+    <link href="http://example.com/2022/10/19/LeetCode-10-19/"/>
+    <id>http://example.com/2022/10/19/LeetCode-10-19/</id>
     <published>2022-10-19T14:58:15.000Z</published>
     <updated>2022-10-19T18:15:22.546Z</updated>
     
@@ -67,6 +93,34 @@
     <category term="模拟" scheme="http://example.com/tags/%E6%A8%A1%E6%8B%9F/"/>
     
     <category term="计数" scheme="http://example.com/tags/%E8%AE%A1%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode-10-17</title>
+    <link href="http://example.com/2022/10/17/LeetCode%2010-17/"/>
+    <id>http://example.com/2022/10/17/LeetCode%2010-17/</id>
+    <published>2022-10-17T14:00:15.000Z</published>
+    <updated>2022-10-21T05:11:18.911Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="904-水果成篮"><a href="#904-水果成篮" class="headerlink" title="904. 水果成篮"></a><a href="https://leetcode.cn/problems/fruit-into-baskets/">904. 水果成篮</a></h1><p><code>滑动窗口</code> <code>哈希表</code></p><h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ul><li>关键在于已经存储了两种水果的情况下，遇到第三种水果应该怎么办<ul><li>当出现第三种水果 开始缩小窗口 即把左边界开始向右移动 边移动边把左边界的水果数 - 1</li><li>当左边界的水果没了的时候 用此时的窗口大小和出现第三种水果前的窗口大小比对选最大值</li><li>当右边界到头，此时返回最大值即可。</li></ul></li></ul><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">totalFruit</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;fruits)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; count;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> y = <span class="number">0</span>; y &lt; fruits.<span class="built_in">size</span>(); y++)</span><br><span class="line">        &#123;</span><br><span class="line">            ++count [fruits [y]]; <span class="comment">// 遍历到一种水果就先放进哈希表，对应数量 + 1</span></span><br><span class="line">            <span class="comment">// 当遇到第三种水果进入哈希表了 </span></span><br><span class="line">            <span class="keyword">while</span> (count.<span class="built_in">size</span>() &gt; <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> it = fruits [x];  <span class="comment">// 左边界的水果种类 </span></span><br><span class="line">                --count [it];         <span class="comment">// 左边界那种水果数量 --</span></span><br><span class="line">                x++;                 <span class="comment">// 减一个，左边界向右走一步 </span></span><br><span class="line">                <span class="keyword">if</span> (count [it] == <span class="number">0</span>)  <span class="comment">// 直到 - 到 0</span></span><br><span class="line">                    count.<span class="built_in">erase</span>(it); <span class="comment">// 就把这种水果删掉 </span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 每次比较出最大的窗口保存 </span></span><br><span class="line">            sum = <span class="built_in">max</span>(sum, y - x + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Solution s1;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; f&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>&#125;;</span><br><span class="line">    <span class="type">int</span> x = s1.<span class="built_in">totalFruit</span>(f);</span><br><span class="line">    cout &lt;&lt; x;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;904-水果成篮&quot;&gt;&lt;a href=&quot;#904-水果成篮&quot; class=&quot;headerlink&quot; title=&quot;904. 水果成篮&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/fruit-into-baskets/&quot;&gt;90</summary>
+      
+    
+    
+    
+    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
+    
+    
+    <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="滑动窗口" scheme="http://example.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+    <category term="Hash" scheme="http://example.com/tags/Hash/"/>
     
   </entry>
   
@@ -98,8 +152,8 @@
   
   <entry>
     <title>LeetCode-10-16</title>
-    <link href="http://example.com/2022/10/16/LeetCode10-16/"/>
-    <id>http://example.com/2022/10/16/LeetCode10-16/</id>
+    <link href="http://example.com/2022/10/16/LeetCode-10-16/"/>
+    <id>http://example.com/2022/10/16/LeetCode-10-16/</id>
     <published>2022-10-15T16:58:15.000Z</published>
     <updated>2022-10-16T06:22:33.159Z</updated>
     
@@ -121,34 +175,6 @@
     <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
     
     <category term="DFS" scheme="http://example.com/tags/DFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-10-16</title>
-    <link href="http://example.com/2022/10/16/LeetCode%2010-17/"/>
-    <id>http://example.com/2022/10/16/LeetCode%2010-17/</id>
-    <published>2022-10-15T16:58:15.000Z</published>
-    <updated>2022-10-17T17:03:38.278Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="904-水果成篮"><a href="#904-水果成篮" class="headerlink" title="904. 水果成篮"></a><a href="https://leetcode.cn/problems/fruit-into-baskets/">904. 水果成篮</a></h1><p><code>滑动窗口</code> <code>哈希表</code></p><h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><ul><li>关键在于已经存储了两种水果的情况下，遇到第三种水果应该怎么办<ul><li>当出现第三种水果 开始缩小窗口 即把左边界开始向右移动 边移动边把左边界的水果数 - 1</li><li>当左边界的水果没了的时候 用此时的窗口大小和出现第三种水果前的窗口大小比对选最大值</li><li>当右边界到头，此时返回最大值即可。</li></ul></li></ul><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">totalFruit</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;fruits)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="type">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; count;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> y = <span class="number">0</span>; y &lt; fruits.<span class="built_in">size</span>(); y++)</span><br><span class="line">        &#123;</span><br><span class="line">            ++count [fruits [y]]; <span class="comment">// 遍历到一种水果就先放进哈希表，对应数量 + 1</span></span><br><span class="line">            <span class="comment">// 当遇到第三种水果进入哈希表了 </span></span><br><span class="line">            <span class="keyword">while</span> (count.<span class="built_in">size</span>() &gt; <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> it = fruits [x];  <span class="comment">// 左边界的水果种类 </span></span><br><span class="line">                --count [it];         <span class="comment">// 左边界那种水果数量 --</span></span><br><span class="line">                x++;                 <span class="comment">// 减一个，左边界向右走一步 </span></span><br><span class="line">                <span class="keyword">if</span> (count [it] == <span class="number">0</span>)  <span class="comment">// 直到 - 到 0</span></span><br><span class="line">                    count.<span class="built_in">erase</span>(it); <span class="comment">// 就把这种水果删掉 </span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 每次比较出最大的窗口保存 </span></span><br><span class="line">            sum = <span class="built_in">max</span>(sum, y - x + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Solution s1;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; f&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">2</span>&#125;;</span><br><span class="line">    <span class="type">int</span> x = s1.<span class="built_in">totalFruit</span>(f);</span><br><span class="line">    cout &lt;&lt; x;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;904-水果成篮&quot;&gt;&lt;a href=&quot;#904-水果成篮&quot; class=&quot;headerlink&quot; title=&quot;904. 水果成篮&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://leetcode.cn/problems/fruit-into-baskets/&quot;&gt;90</summary>
-      
-    
-    
-    
-    <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
-    
-    
-    <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
-    
-    <category term="滑动窗口" scheme="http://example.com/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
-    
-    <category term="Hash" scheme="http://example.com/tags/Hash/"/>
     
   </entry>
   
@@ -180,8 +206,8 @@
   
   <entry>
     <title>LeetCode-10-15</title>
-    <link href="http://example.com/2022/10/15/LeetCode10-15/"/>
-    <id>http://example.com/2022/10/15/LeetCode10-15/</id>
+    <link href="http://example.com/2022/10/15/LeetCode-10-15/"/>
+    <id>http://example.com/2022/10/15/LeetCode-10-15/</id>
     <published>2022-10-14T17:13:09.000Z</published>
     <updated>2022-10-15T17:10:34.195Z</updated>
     
@@ -206,8 +232,8 @@
   
   <entry>
     <title>LeetCode-10-14</title>
-    <link href="http://example.com/2022/10/14/LeetCode10.14/"/>
-    <id>http://example.com/2022/10/14/LeetCode10.14/</id>
+    <link href="http://example.com/2022/10/14/LeetCode-10-14/"/>
+    <id>http://example.com/2022/10/14/LeetCode-10-14/</id>
     <published>2022-10-14T15:24:48.000Z</published>
     <updated>2022-10-16T06:23:27.699Z</updated>
     
