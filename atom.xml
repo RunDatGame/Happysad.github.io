@@ -262,9 +262,9 @@
     <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
     
     
-    <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
     
     <category term="DFS" scheme="http://example.com/tags/DFS/"/>
     
@@ -316,9 +316,9 @@
     <category term="LeetCode" scheme="http://example.com/categories/LeetCode/"/>
     
     
-    <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    
+    <category term="数组" scheme="http://example.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
