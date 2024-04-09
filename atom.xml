@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-08T12:26:07.137Z</updated>
+  <updated>2024-04-09T10:10:29.463Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>acwing 差分</title>
+    <link href="http://example.com/2024/04/09/acwing-%E5%B7%AE%E5%88%86/"/>
+    <id>http://example.com/2024/04/09/acwing-%E5%B7%AE%E5%88%86/</id>
+    <published>2024-04-09T10:07:06.000Z</published>
+    <updated>2024-04-09T10:10:29.463Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a><a href="https://www.acwing.com/problem/content/description/799/">差分</a></h1><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>输入一个长度为 n 的整数序列。</p><p>接下来输入 m 个操作，每个操作包含三个整数 l,r,c，<br>表示将序列中 [l,r] 之间的每个数加上 c</p><p>请你输出进行完所有操作后的序列。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h4 id="核心概念公式"><a href="#核心概念公式" class="headerlink" title="核心概念公式"></a>核心概念公式</h4><p>设想 S 数组是 前缀和数组 ；；；    B 数组是 差分数组</p><p> ***  S [i]&#x3D; B [1]+B [2]+…+B [i]  ***<br> *** S [i]&#x3D; S [i-1]+B [i]           ***</p><h4 id="模拟构造差分数组的过程"><a href="#模拟构造差分数组的过程" class="headerlink" title="模拟构造差分数组的过程"></a>模拟构造差分数组的过程</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">S:  1 2 2 1 2 1</span><br><span class="line">B: 1 -1 0 0 0 0</span><br><span class="line">    1 1 -2 0 0 0 </span><br><span class="line">    1 1  0 -1 0 0</span><br></pre></td></tr></table></figure><h4 id="构造差分数组的方法"><a href="#构造差分数组的方法" class="headerlink" title="构造差分数组的方法"></a>构造差分数组的方法</h4><p>*** B [i] &#x3D; S [i] - S [i-1] ***<br>等价于<br>*** 在 B [i] 处加上 S [i] 的同时在 B [i+1] 处减去 S [i] ***</p><h4 id="C-代码"><a href="#C-代码" class="headerlink" title="C++ 代码"></a>C++ 代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N =  100010;</span><br><span class="line">int S [N],B [N];</span><br><span class="line"></span><br><span class="line">//S 数组是 前缀和数组 </span><br><span class="line">// *****  S [i]= B [1]+B [2]+...+B [i]  *****</span><br><span class="line">// *****  S [i]= S [i-1]+B [i]           *****</span><br><span class="line">// 核心操作 </span><br><span class="line"></span><br><span class="line">void insert (int l,int r,int c) &#123;</span><br><span class="line">    B [l] = B [l] + c;   //l 处 + c     对 S [1 ~ l-1] 无影响 </span><br><span class="line">                         //           对 S [l ~ r] 加了 c</span><br><span class="line">                         //           对 S [r+1 ~ N] 也加了 c</span><br><span class="line">    </span><br><span class="line">    B [r+1] = B [r+1] - c; //r+1 处 - c 对 S [1 ~ l-1] 无影响 </span><br><span class="line">                           //         对 S [l ~ r] 无影响 </span><br><span class="line">                           //         对 S [r+1 ~ N] 减了 c</span><br><span class="line">                           // 整体是只对 S【l~r】加了 c  达到目的！</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">    int n,m,l,r,c;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for (int i=1;i&lt;=n;i++) cin&gt;&gt;S [i];</span><br><span class="line">    // 构造差分数组 B</span><br><span class="line">    for (int i=1;i&lt;=n;i++) insert (i,i,S [i]);  //(1) B [1]+=S [1],B [2]-=S [1]  (2) B [2]+=S [2] B [3]-=S [2] ......</span><br><span class="line">    </span><br><span class="line">    // 总结：构造差分数组的方法：B [i] = S [i] - S [i-1] 等价于 在 B [i] 处加上 S [i] 的同时在 B [i+1] 处减去 S [i]</span><br><span class="line">    </span><br><span class="line">    while (m--)&#123;</span><br><span class="line">        cin&gt;&gt;l&gt;&gt;r&gt;&gt;c;</span><br><span class="line">        insert (l,r,c);</span><br><span class="line">    &#125;</span><br><span class="line">    // 再计算一下对于当前数组的前缀和 </span><br><span class="line">    // 为什么求前缀和？因为本来就把 S 当前缀和 然后对差分数组进行了操作 代替直接对前缀和数组操作 现在根据操作后的差分数组算出操作后的前缀和数组 </span><br><span class="line">    for (int i=1;i&lt;=n;i++) S [i]=S [i-1]+B [i];</span><br><span class="line">    for (int i = 1; i &lt;= n; i ++ ) cout&lt;&lt;S [i]&lt;&lt;&quot; &quot;;</span><br><span class="line">    return 0;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;差分&quot;&gt;&lt;a href=&quot;#差分&quot; class=&quot;headerlink&quot; title=&quot;差分&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.acwing.com/problem/content/description/799/&quot;&gt;差分&lt;/a&gt;&lt;/h1&gt;&lt;h3</summary>
+      
+    
+    
+    
+    <category term="Acwing" scheme="http://example.com/categories/Acwing/"/>
+    
+    
+    <category term="Acwing" scheme="http://example.com/tags/Acwing/"/>
+    
+    <category term="差分" scheme="http://example.com/tags/%E5%B7%AE%E5%88%86/"/>
+    
+  </entry>
   
   <entry>
     <title>acwing 2024-4-8</title>
